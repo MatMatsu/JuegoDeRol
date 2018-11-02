@@ -1,5 +1,6 @@
 package juegoderol;
 import java.util.Random;
+import javax.swing.JOptionPane;
 
 public class JuegoDeRol {
 
@@ -9,38 +10,33 @@ public class JuegoDeRol {
         Random aleatorio = new Random();
         int i = 0;
         
-        System.out.println(jugador1.nombre + "---> VIDA: " + jugador1.vida);
-        System.out.println(jugador2.nombre + "---> VIDA: " + jugador2.vida);
-
+        JOptionPane.showMessageDialog(null, jugador1.mostrarVida() + "\n" + jugador2.mostrarVida());
         
         while (jugador1.vida > 0 && jugador2.vida > 0) {
             i++;
-            System.out.println("\nROUND " + i);
+            JOptionPane.showMessageDialog(null, "\nROUND " + i);
 
             int ataqueJ1 = aleatorio.nextInt(jugador1.maxPower-jugador1.minPower) + jugador1.minPower;
 
-            System.out.println(jugador1.nombre + " hace " + ataqueJ1 + " de daño.");
+            JOptionPane.showMessageDialog(null, jugador1.nombre + " hace " + ataqueJ1 + " de daño.");
             jugador2.vida = jugador2.vida - ataqueJ1;
             if (jugador2.vida > 0) {
-                System.out.println(jugador2.nombre + "---> VIDA: " + jugador2.vida);
+                JOptionPane.showMessageDialog(null, jugador1.mostrarVida() + "\n" + jugador2.mostrarVida());
             } else {
-                System.out.println(jugador2.nombre + "---> VIDA: 0\n\n" + jugador1.nombre + " es el ganador!");
+                JOptionPane.showMessageDialog(null, jugador1.mostrarVida() + "\n" + jugador2.nombre + "---> VIDA: 0\n\n" + jugador1.nombre + " es el ganador!");
             }
             
             if(jugador2.vida > 0) {
                 int ataqueJ2 = aleatorio.nextInt(jugador2.maxPower-jugador2.minPower) + jugador2.minPower;
 
-                System.out.println(jugador2.nombre + " hace " + ataqueJ2 + " de daño.");
+                JOptionPane.showMessageDialog(null, jugador2.nombre + " hace " + ataqueJ2 + " de daño.");
                 jugador1.vida = jugador1.vida - ataqueJ2;
                 if (jugador1.vida > 0) {
-                    System.out.println(jugador1.nombre + "---> VIDA: " + jugador1.vida);
+                    JOptionPane.showMessageDialog(null, jugador1.mostrarVida() + "\n" + jugador2.mostrarVida());
                 } else  {
-                    System.out.println(jugador1.nombre + "---> VIDA: 0\n\n" + jugador2.nombre + " es el ganador!");
+                    JOptionPane.showMessageDialog(null, jugador1.nombre + "---> VIDA: 0\n" + jugador1.mostrarVida() + "\n\n" + jugador2.nombre + " es el ganador!");
                 }
             }
         }
-        
-        
     }
-    
 }

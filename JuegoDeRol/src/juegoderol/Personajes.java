@@ -12,5 +12,12 @@ public class Personajes {
         this.maxPower = nuevoMaxPower;
     }
     
+    public String mostrarVida() {
+        String mensaje;
+        
+        mensaje = this.nombre + "---> VIDA: " + this.vida;
+        
+        return mensaje;
+    }
     
 }
