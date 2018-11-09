@@ -26,6 +26,7 @@ public class VentanaCombate extends javax.swing.JFrame {
         namePlayerTwo = VentanaCrearPersonajes.nombreJugadorDos.getText();
         classPlayerTwo = (String)VentanaCrearPersonajes.claseJugadorDos.getSelectedItem();
         playerTwo = new Jugador(namePlayerTwo, classPlayerTwo);
+        
         initComponents();
         
         this.setTitle("Juego de Rol - Combate");
