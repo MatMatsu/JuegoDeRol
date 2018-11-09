@@ -12,11 +12,9 @@ public class VentanaCrearPersonajes extends javax.swing.JFrame {
         //Titulo y posicion ventana
         this.setTitle("Juego de Rol - Crear Personajes");
         this.setLocationRelativeTo(null);
-
-        
+        //REPRODUCIR MUSICA
         clip = Applet.newAudioClip(ClassLoader.getSystemResource("music/menu.wav"));
         clip.play();
-
     }
 
     @SuppressWarnings("unchecked")
@@ -124,11 +122,9 @@ public class VentanaCrearPersonajes extends javax.swing.JFrame {
 
     private void crearPersonajesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_crearPersonajesActionPerformed
         clip.stop();
-                
         this.setVisible(false);
         VentanaCombate window = new VentanaCombate();
         window.setVisible(true);
-        
     }//GEN-LAST:event_crearPersonajesActionPerformed
 
     /**

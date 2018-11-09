@@ -56,7 +56,7 @@ public class VentanaCombate extends javax.swing.JFrame {
         descSegAtEspJugDos.setText(playerTwo.getDescAtEsDos());
         defensaJugDos = playerTwo.isDefensa();
         imgJugDos.setIcon(new javax.swing.ImageIcon(getClass().getResource(playerTwo.getRutaImg())));
-        //MUSICA
+        //MUSICA PRE-COMIENZO DE BATALLA
         clip = Applet.newAudioClip(ClassLoader.getSystemResource("music/entra_en_batalla.wav"));
         clip.play();
         //DE FORMA ALEATORIA SELECCIONA QUIEN COMIENZA LA BATALLA Y HABILITA LOS BOTONES DE ESE JUGADOR
@@ -69,6 +69,7 @@ public class VentanaCombate extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Comienza el jugador " + playerTwo.getNombre());
         }
         clip.stop();
+        //MUSICA COMIENZO DE BATALLA
         clip = Applet.newAudioClip(ClassLoader.getSystemResource("music/batalla.wav"));
         clip.loop();
     }
