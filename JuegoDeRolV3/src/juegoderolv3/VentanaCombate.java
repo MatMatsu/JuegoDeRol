@@ -18,11 +18,11 @@ public class VentanaCombate extends javax.swing.JFrame {
     AudioClip clip;
     
     public VentanaCombate() {
-         //JUGADOR 1
+         //CREAR JUGADOR 1
         namePlayerOne = VentanaCrearPersonajes.nombreJugadorUno.getText();
         classPlayerOne = (String)VentanaCrearPersonajes.claseJugadorUno.getSelectedItem();
         playerOne = new Jugador(namePlayerOne, classPlayerOne);
-        //JUGADOR 2
+        //CREAR JUGADOR 2
         namePlayerTwo = VentanaCrearPersonajes.nombreJugadorDos.getText();
         classPlayerTwo = (String)VentanaCrearPersonajes.claseJugadorDos.getSelectedItem();
         playerTwo = new Jugador(namePlayerTwo, classPlayerTwo);
@@ -31,7 +31,7 @@ public class VentanaCombate extends javax.swing.JFrame {
         
         this.setTitle("Juego de Rol - Combate");
         this.setLocationRelativeTo(null);
-        //DATA JUGADOR 1
+        //DATA JUGADOR 1 EN VENTANA
         nombreJugadorUno.setText(playerOne.getNombre());
         claseJugUno.setText(playerOne.getClase());
         vidaJugadorUno.setText(Integer.toString(playerOne.getVida()));
@@ -44,7 +44,7 @@ public class VentanaCombate extends javax.swing.JFrame {
         descSegAtEspJugUno.setText(playerOne.getDescAtEsDos());
         defensaJugUno = playerOne.isDefensa();
         imgJugUno.setIcon(new javax.swing.ImageIcon(getClass().getResource(playerOne.getRutaImg())));
-        //DATA JUGADOR 2
+        //DATA JUGADOR 2 EN VENTANA
         nombreJugadorDos.setText(playerTwo.getNombre());
         claseJugDos.setText(playerTwo.getClase());
         vidaJugadorDos.setText(Integer.toString(playerTwo.getVida()));
@@ -811,4 +811,3 @@ public class VentanaCombate extends javax.swing.JFrame {
     public boolean defensaJugUno;
     public boolean defensaJugDos;
 }
-

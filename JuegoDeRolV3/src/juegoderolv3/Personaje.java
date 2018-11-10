@@ -13,7 +13,6 @@ public class Personaje {
     private int maxPower = 15;
     private boolean defensa = false;
     //CONSTRUCTORES
-
     public Personaje (String nombre, String clase) {
         this.nombre = nombre;
         this.clase = clase;
