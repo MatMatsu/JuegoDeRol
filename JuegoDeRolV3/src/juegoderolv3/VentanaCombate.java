@@ -808,6 +808,7 @@ public class VentanaCombate extends javax.swing.JFrame {
     public javax.swing.JLabel vidaJugadorDos;
     public javax.swing.JLabel vidaJugadorUno;
     // End of variables declaration//GEN-END:variables
+    //VARIABLES PARA ALMECENAR LA DEFENSA DE CADA JUGADOR
     public boolean defensaJugUno;
     public boolean defensaJugDos;
 }
